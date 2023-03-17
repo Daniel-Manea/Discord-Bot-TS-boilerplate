@@ -5,7 +5,7 @@ Installation
 
 To install and run the bot locally, you'll need to have Node.js and Yarn installed on your machine. Then, you can follow these steps:
 
-    Clone the repository: git clone https://github.com/Daniel-ManeaTypeScript-Discord-Bot.git
+    Clone the repository: git clone https://github.com/Daniel-Manea/TypeScript-Discord-Bot.git
     Install dependencies: yarn
     Create a .env file in the root directory of the project, and add your Discord bot token like so: TOKEN=your-token-here
     Start the bot: yarn start
