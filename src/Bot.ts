@@ -1,13 +1,11 @@
-import { Client, GatewayIntentBits } from 'discord.js'
+import { Client, Collection, GatewayIntentBits, SlashCommandBuilder } from 'discord.js'
 import { config } from 'dotenv'
 import { EventEmitter } from 'node:events'
-import CommandHandler from './handlers/CommandHandler'
+import { CommandHandler } from './handlers/CommandHandler'
 import { EventHandler } from './handlers/EventHandler'
-import DeployCommands from './utils/DeployCommands'
 config()
 EventEmitter.defaultMaxListeners = 0
 
-// Create a new client instance
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -18,9 +16,6 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 })
-
 CommandHandler(client)
 EventHandler(client)
-DeployCommands(client)
-// Login to Discord with your client's token
 client.login(process.env.TOKEN)
