@@ -1,15 +1,15 @@
-import { Client } from 'discord.js';
-import fs from 'fs';
-import path from 'path';
+import { Client } from "discord.js";
+import fs from "fs";
+import path from "path";
 
 export const EventHandler = (client: Client) => {
-  const parentDirName = path.join(__dirname, '../');
-  const eventPaths = path.resolve(parentDirName, 'events');
+  const parentDirName = path.join(__dirname, "../");
+  const eventPaths = path.resolve(parentDirName, "events");
   const eventFolders = fs.readdirSync(eventPaths);
 
   for (const eventFolder of eventFolders) {
-    const eventPath = path.join(parentDirName, 'events', eventFolder);
-    const eventFiles = fs.readdirSync(eventPath).filter(file => file.endsWith('.ts'));
+    const eventPath = path.join(parentDirName, "events", eventFolder);
+    const eventFiles = fs.readdirSync(eventPath).map((file) => file);
 
     for (const file of eventFiles) {
       const filePath = path.join(eventPath, file);

@@ -1,4 +1,4 @@
-import { Client } from 'discord.js';
+import { Client, CommandInteraction } from 'discord.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -9,12 +9,16 @@ export const CommandHandler = (client: Client) => {
 
   for (const commandFolder of commandFolders) {
     const commandPath = path.join(parentDirName, 'commands', commandFolder);
-    const commandFiles = fs.readdirSync(commandPath).filter(file => file.endsWith('.ts'));
+    const commandFiles = fs.readdirSync(commandPath).map(file => file);
 
     for (const file of commandFiles) {
       const filePath = path.join(commandPath, file);
       const command = require(filePath).default;
-      client.once(command.name, (...args: any[]) => command.run(...args));
+      client.on(command.name, async (interaction: CommandInteraction) => {
+        if (!interaction.isCommand()) return;
+        if (interaction.commandName !== command.data.name) return;
+        command.run(interaction)
+      });
     }
   }
 };
