@@ -6,6 +6,7 @@ import { EventHandler } from './handlers/EventHandler'
 config()
 EventEmitter.defaultMaxListeners = 0
 
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -16,6 +17,8 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 })
+
+
 CommandHandler(client)
 EventHandler(client)
 client.login(process.env.TOKEN)

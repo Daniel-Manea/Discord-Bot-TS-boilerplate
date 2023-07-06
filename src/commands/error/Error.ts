@@ -1,6 +1,6 @@
 import { CommandInteraction } from "discord.js";
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { ICommand } from "../../interfaces/ICommand";
+import { ICommand } from "../../interfaces/ICommand"
 import { createErrorEmbed } from "../../ui-elements/embeds/Error";
 import { createErrorButton } from "../../ui-elements/buttons/Error";
 
