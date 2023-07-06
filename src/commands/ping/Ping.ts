@@ -1,6 +1,6 @@
 import { CommandInteraction } from "discord.js";
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { ICommand } from "src/interfaces/ICommand";
+import { ICommand } from "../../interfaces/ICommand";
 
 export default {
   name: 'interactionCreate',

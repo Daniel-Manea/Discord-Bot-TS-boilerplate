@@ -1,33 +1,33 @@
 {
   "compilerOptions": {
-      "target": "ESNext",
-      "module": "commonjs",
-      "rootDir": "./src/",
-      "outDir": "./dist/",
-      "strict": true,
-      "moduleResolution": "node",
-      "importHelpers": true,
-      "experimentalDecorators": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "allowSyntheticDefaultImports": true,
-      "resolveJsonModule": true,
-      "forceConsistentCasingInFileNames": true,
-      "removeComments": true,
-      "typeRoots": [
-          "node_modules/@types"
-      ],
-      "sourceMap": false,
-      "baseUrl": "./"
+    "target": "ESNext",
+    "module": "commonjs",
+    "rootDir": "./src/",
+    "outDir": "./dist/",
+    "strict": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "typeRoots": ["node_modules/@types"],
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@commands/*": ["src/commands/*", "dist/commands/*"],
+      "@events/*": ["src/events/*", "dist/events/*"],
+      "@messages/*": ["src/messages/*", "dist/messages/*"],
+      "@handlers/*": ["src/handlers/*", "dist/handlers/*"],
+      "@interfaces/*": ["src/interfaces/*", "dist/interfaces/*"],
+      "@ui-elements/*": ["src/ui-elements/*", "dist/ui-elements/*"]
+    }
   },
-  "files": [
-      "src/Bot.ts"
-  ],
-  "include": [
-      "./**/*.ts"
-  ],
-  "exclude": [
-      "node_modules",
-      "dist"
-  ],
-} 
+
+  "files": ["src/Bot.ts"],
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
