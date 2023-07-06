@@ -1,8 +1,11 @@
 import { Client, Collection, GatewayIntentBits, SlashCommandBuilder } from 'discord.js'
 import { config } from 'dotenv'
 import { EventEmitter } from 'node:events'
-import { CommandHandler } from './handlers/CommandHandler'
-import { EventHandler } from './handlers/EventHandler'
+import { CommandHandler } from '@handlers/CommandHandler'
+import { EventHandler } from '@handlers/EventHandler'
+
+
+
 config()
 EventEmitter.defaultMaxListeners = 0
 
