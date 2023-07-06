@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { Commands } from "../../Commands";
+import { Commands } from "@root/Commands";
 
 export default {
   name: 'ready',

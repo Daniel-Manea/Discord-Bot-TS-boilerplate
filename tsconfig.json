@@ -16,14 +16,15 @@
     "removeComments": true,
     "typeRoots": ["node_modules/@types"],
     "sourceMap": false,
-    "baseUrl": ".",
+       "baseUrl": ".",
     "paths": {
-      "@commands/*": ["src/commands/*", "dist/commands/*"],
-      "@events/*": ["src/events/*", "dist/events/*"],
-      "@messages/*": ["src/messages/*", "dist/messages/*"],
-      "@handlers/*": ["src/handlers/*", "dist/handlers/*"],
-      "@interfaces/*": ["src/interfaces/*", "dist/interfaces/*"],
-      "@ui-elements/*": ["src/ui-elements/*", "dist/ui-elements/*"]
+      "@commands/*": ["src/commands/*"],
+      "@events/*": ["src/events/*"],
+      "@messages/*": ["src/messages/*"],
+      "@handlers/*": ["src/handlers/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@ui-elements/*": ["src/ui-elements/*"],
+      "@root/*": ["src/*"]
     }
   },
 
